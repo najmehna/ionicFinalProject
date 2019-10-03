@@ -3,7 +3,28 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+   firebase :
+   {
+    apiKey: "AIzaSyACTlg9cwzzLPyZmgbnLwiA-6ibBCn253k", 
+    authDomain: "ionic4learning.firebaseapp.com", 
+    databaseURL: "https://ionic4learning.firebaseio.com", 
+    projectId: "ionic4learning",
+    storageBucket: "ionic4learning.appspot.com", 
+    messagingSenderId: "1075769989802",
+    appId: "1:1075769989802:web:869269e30144cac35aced3", 
+    measurementId: "G-N4PDEME9WK"
+    }
+   //{
+  //   apiKey: "AIzaSyC5nEpg8y08lO6WuZ1yYNwf9faF1tGIYlg",
+  //   authDomain: "ionicfirebase-b3451.firebaseapp.com",
+  //   databaseURL: "https://ionicfirebase-b3451.firebaseio.com",
+  //   projectId: "ionicfirebase-b3451",
+  //   storageBucket: "",
+  //  // messagingSenderId: "877217402959",
+  //   appId: "1:877217402959:web:ba58349610f23e10ac5a3a",
+  //   measurementId: "G-ZYLTPN0JMK"
+  // }
 };
 
 /*

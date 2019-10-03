@@ -27,6 +27,8 @@
               <ion-item>
                 <ion-input name="confirm" type="password" placeholder="Password again" ngModel required></ion-input>
               </ion-item>
+              <ion-button (click) = "takePicture()"><ion-icon name="camera" padding></ion-icon></ion-button>
+              <ion-img [src] = profileImage></ion-img>
             </div>
             <div padding>
               <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>

@@ -1,5 +1,7 @@
 {
   "name": "ionicFireBaseTest",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,14 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="text-align: center;">
+      Home
     </ion-title>
+    <a href = 'sign-in' slot="end" padding>
+      <ion-icon name="log-out" ></ion-icon>
+    </a>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{userName}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+          <ion-textarea placeholder="What's on your mind..." [(ngModel)]="postContent"></ion-textarea>
+          <ion-button (click)="submitPost()">Post</ion-button>
+      </ion-card-content>
+    </ion-card>
+  <ion-list>
+      <ion-item-sliding *ngFor="let post of postList; let i = index">
+      <!-- <ion-item>
+        <ion-label>{{post.author}}</ion-label>
+        <ion-label>{{post.content}}</ion-label>
+        <ion-label>{{post.date}}</ion-label>
+      </ion-item> -->
+      <ion-card>
+          <ion-card-header>
+            <ion-datetime displayFormat="MM DD YY H:m" value ={{post.date}}></ion-datetime>
+            <ion-card-title>{{post.author}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+              {{post.content}}
+          </ion-card-content>
+        </ion-card>
+        </ion-item-sliding>
+    </ion-list>
+
+
 </ion-content>

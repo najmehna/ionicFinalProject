@@ -12,12 +12,21 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { IonicStorageModule } from '@ionic/storage';
+//import { CrudService } from './firebaseFile';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { FormsModule } from '@angular/forms';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [
+    imports: [
     IonicStorageModule.forRoot(),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
+    FormsModule,
+    Camera,
     BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
     AngularFireAuthModule // imports firebase/auth, only needed for auth features,
